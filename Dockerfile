@@ -7,8 +7,11 @@ RUN apt-get install -y \
         r-base-dev \
         git \
         build-essential \
-        git
-        
+        git \
+        texlive-full \
+        make
+
+RUN apt-get --purge -y remove tex.\*-doc$
 
 # Locale
 RUN apt-get install -y locales
